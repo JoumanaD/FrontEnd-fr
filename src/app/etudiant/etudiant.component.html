@@ -1,0 +1,65 @@
+<h1 mat-dialog-title>Etudiant</h1>
+<div mat-dialog-content>
+  <form>
+    <div formGroupName="defis">
+      <div class="fields">
+
+        <mat-form-field>
+          <mat-label>ID</mat-label>
+          <span matPrefix>D </span>
+          <input formControlName="id" id="id" matInput>
+
+        </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Titre</mat-label>
+        <input formControlName="titre" id="titre" placeholder="Titre du défi" matInput>
+
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Type</mat-label>
+        <input formControlName="nomType" id="type" placeholder="Le type du défi" matInput>
+
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Arrêt</mat-label>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Mot clés</mat-label>
+        <input formControlName="motscles" id="motscles" placeholder="Les mots clés du défi" matInput>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Points</mat-label>
+        <input formControlName="points" id="points" placeholder="Les points du défi" matInput>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Durée</mat-label>
+        <input formControlName="duree" id="duree" placeholder="Durée du défi" matInput>
+
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Prologue</mat-label>
+        <textarea formControlName="prologue" id="prologue" placeholder="Prologue du défi" matInput cols="30" rows="10"></textarea>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Epilogue</mat-label>
+        <textarea formControlName="epilogue" id="epilogue" placeholder="Epilogue du défi" matInput cols="30" rows="10"></textarea>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Commentaire</mat-label>
+        <textarea formControlName="commentaire" id="commentaire" placeholder="Commentaire du défi" matInput cols="30" rows="10"></textarea>
+      </mat-form-field>
+
+    </div>
+  </div>
+  </form>
+</div>
+<div mat-dialog-actions>
+
+</div>

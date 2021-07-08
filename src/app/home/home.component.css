@@ -12,7 +12,31 @@ h1 {
 
 }
 
-div {
+.myButton {
+	background-color: wheat;
+	border-radius:28px;
+	background-color: wheat;
+	border:1px solid ;
+	display:inline-block;
+	cursor:pointer;
+	color:black;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px black;
+  position: relative;
+  top: 30%;
+  left: 50%;
+}
+.myButton:hover {
+	background-color:grey;
+}
+.myButton:active {
+	color: rgb(197, 197, 92);
+}
+
+.background {
   background: url('/assets/img/campus-06.jpg') no-repeat center center fixed;
   background-size: cover;
   height: 100%;
