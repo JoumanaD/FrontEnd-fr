@@ -1,3 +1,4 @@
+import { ShareService } from './../share.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,10 +9,11 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
   title = 'FICHE DE RENSEIGNEMENTS DE STAGE - 2021/2022';
 
-  constructor() { }
+  constructor(private ficheservice:ShareService) { }
 
   ngOnInit(): void {
   }
+
 
 
 

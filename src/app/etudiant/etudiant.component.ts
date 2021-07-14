@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({
@@ -8,9 +9,26 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 })
 export class EtudiantComponent implements OnInit {
 
-  constructor() { }
+  constructor(private formBuilder:FormBuilder) {
+  }
 
   ngOnInit(): void {
   }
+
+  etudiantForm = this.formBuilder.group({
+    IDetudiant:[''],
+    nom:[''],
+    prenom:[''],
+    numTeleph:[''],
+    email:[''],
+    adresse:[''],
+    codepostale:[''],
+    ville:[''],
+    pays:[''],
+    TypeSS:[''],
+    CAM:[''],
+    inscrit:[''],
+    enseingnant:['']
+  })
 
 }

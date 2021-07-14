@@ -1,0 +1,42 @@
+<div>
+  <table nat-table class="mat-elevation-z8" id="etudiants">
+    <thead>
+      <tr>
+        <th>Numéro Etudiant</th>
+        <th>Nom</th>
+        <th>Prénom</th>
+        <th>No Tél</th>
+        <th>Email</th>
+        <th>Adresse</th>
+        <th>CP</th>
+        <th>Ville</th>
+        <th>Pays</th>
+        <th>Type sécurité sociale</th>
+        <th>Assurance Maladie</th>
+        <th>Inscrit</th>
+        <th>Enseingnant</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let etd of EtudiantList">
+        <td>{{ etd.IDetudiant }}</td>
+        <td>{{ etd.nom }}</td>
+        <td>{{ etd.prenom }}</td>
+        <td>{{ etd.numTeleph }}</td>
+        <td>{{ etd.email }}</td>
+        <td>{{ etd.adresse }}</td>
+        <td>38</td>
+        <td>wrvw</td>
+        <td>rrr</td>
+        <td>{{ etd.TypeSS }}</td>
+        <td>{{ etd.CAM }}</td>
+        <td>{{ etd.inscrit }}</td>
+        <td>{{ etd.enseingnant }}</td>
+
+      </tr>
+    </tbody>
+  </table>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+
+</div>

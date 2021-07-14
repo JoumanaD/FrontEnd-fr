@@ -1,65 +1,86 @@
-<h1 mat-dialog-title>Etudiant</h1>
-<div mat-dialog-content>
-  <form>
-    <div formGroupName="defis">
-      <div class="fields">
+<form [formGroup]="etudiantForm" class="form-container">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>COORDONNEES DE L'ETUDIANT</mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="mat-form-field--inline">
+      <div>
+        <div>
+          <mat-form-field class="example-full-width">
+            <mat-label>ID étudiant:</mat-label>
+            <input formControlName="IDetudiant" matInput placeholder="ID étudiant (8 chiffres)" required>
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field class="example-full-width">
+            <mat-label>Nom:</mat-label>
+            <input formControlName="nom" matInput placeholder="Nom" required>
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <mat-label>Prénom:</mat-label>
+            <input formControlName="prenom" matInput placeholder="Prénom" required>
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field class="example-full-width">
+            <mat-label>Numéro Téléphone:</mat-label>
+            <input formControlName="numTeleph" matInput placeholder="Numéro Téléphone" required>
+          </mat-form-field>
+          <mat-form-field class="full-width">
+            <mat-label>Email:</mat-label>
+            <input type="email" class="form-control" formControlName="email" matInput placeholder="Email Adresse" required>
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field class="full-width">
+            <mat-label>Adresse:</mat-label>
+            <input formControlName="adresse" matInput placeholder="Adresse" required>
+          </mat-form-field>
 
-        <mat-form-field>
-          <mat-label>ID</mat-label>
-          <span matPrefix>D </span>
-          <input formControlName="id" id="id" matInput>
+          <mat-form-field class="full-width">
+            <mat-label>Code Postale:</mat-label>
+            <input formControlName="codepostale" matInput placeholder="Code Postal" required>
+          </mat-form-field>
 
-        </mat-form-field>
+          <mat-form-field class="full-width">
+            <mat-label>Ville:</mat-label>
+            <input formControlName="ville" matInput placeholder="Ville" required>
+          </mat-form-field>
 
-      <mat-form-field>
-        <mat-label>Titre</mat-label>
-        <input formControlName="titre" id="titre" placeholder="Titre du défi" matInput>
+          <mat-form-field class="full-width">
+            <mat-label>Pays:</mat-label>
+            <input formControlName="pays" matInput placeholder="Pays" required>
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field class="full-width" style="width:400px !important">
+            <mat-label>Type d'affiliation à la sécurité sociale:</mat-label>
+            <input formControlName="TypeSS" matInput required>
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field class="full-width" style="width:400px !important">
+            <mat-label>Caisse d'assurance maladie:</mat-label>
+            <input formControlName="CAM" matInput required>
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field class="full-width" style="width:400px !important">
+            <mat-label>Inscrit en (préciser la filière d'études):</mat-label>
+            <input formControlName="inscrit" matInput required>
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field class="full-width" style="width:600px !important">
+            <mat-label>Enseignant référent pour l'encadrement du stage pour votre année d'étude:</mat-label>
+            <input formControlName="enseingnant" matInput required>
+          </mat-form-field>
+        </div>
 
-      </mat-form-field>
-
-      <mat-form-field>
-        <mat-label>Type</mat-label>
-        <input formControlName="nomType" id="type" placeholder="Le type du défi" matInput>
-
-      </mat-form-field>
-
-      <mat-form-field>
-        <mat-label>Arrêt</mat-label>
-      </mat-form-field>
-
-      <mat-form-field>
-        <mat-label>Mot clés</mat-label>
-        <input formControlName="motscles" id="motscles" placeholder="Les mots clés du défi" matInput>
-      </mat-form-field>
-
-      <mat-form-field>
-        <mat-label>Points</mat-label>
-        <input formControlName="points" id="points" placeholder="Les points du défi" matInput>
-      </mat-form-field>
-
-      <mat-form-field>
-        <mat-label>Durée</mat-label>
-        <input formControlName="duree" id="duree" placeholder="Durée du défi" matInput>
-
-      </mat-form-field>
-
-      <mat-form-field>
-        <mat-label>Prologue</mat-label>
-        <textarea formControlName="prologue" id="prologue" placeholder="Prologue du défi" matInput cols="30" rows="10"></textarea>
-      </mat-form-field>
-      <mat-form-field>
-        <mat-label>Epilogue</mat-label>
-        <textarea formControlName="epilogue" id="epilogue" placeholder="Epilogue du défi" matInput cols="30" rows="10"></textarea>
-      </mat-form-field>
-      <mat-form-field>
-        <mat-label>Commentaire</mat-label>
-        <textarea formControlName="commentaire" id="commentaire" placeholder="Commentaire du défi" matInput cols="30" rows="10"></textarea>
-      </mat-form-field>
-
-    </div>
-  </div>
-  </form>
-</div>
-<div mat-dialog-actions>
-
-</div>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary">Save</button>
+    </mat-card-actions>
+  </mat-card>
+</form>

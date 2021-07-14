@@ -1,0 +1,98 @@
+<form [formGroup]="etabForm" class="form-container">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>COORDONNEES ETABLISSEMENT D'ACCUEIL DU STAGIAIRE</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div>
+        <div>
+          <mat-form-field class="full-width"  style="width:400px !important">
+            <mat-label>Raison sociale:</mat-label>
+            <input formControlName="raisonSociale" matInput placeholder="Raison sociale" required>
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field class="full-width"  style="width:400px !important">
+            <mat-label>Representation Legal:</mat-label>
+            <input formControlName="representationLegal" matInput placeholder="Representation Legal" required>
+          </mat-form-field>
+          <mat-form-field class="full-width">
+            <mat-label>fonction:</mat-label>
+            <input formControlName="fonction" matInput placeholder="fonction" required>
+          </mat-form-field>
+        </div>
+
+        <div>
+          <mat-form-field class="full-width">
+            <mat-label>No de Siret:</mat-label>
+            <input formControlName="noSiret" matInput placeholder="No de Siret" required>
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field class="full-width">
+            <mat-label>Code APE:</mat-label>
+            <input formControlName="codeAPE" matInput placeholder="1234X" required>
+          </mat-form-field>
+
+          <mat-form-field class="full-width" style="width:400px !important">
+            <mat-label>Domaine d'activité:</mat-label>
+            <input formControlName="domaineDAct" matInput placeholder="Domaine d'activité" required>
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field class="full-width">
+            <mat-label>Effectif:</mat-label>
+            <input formControlName="effectif" matInput placeholder="Effectif" required>
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field class="full-width">
+            <mat-label>adresse</mat-label>
+            <input formControlName="adresse" matInput placeholder="adresse" required>
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field class="full-width" style="width:400px !important">
+            <h2>Service d'accueil du stagiaire:</h2>
+            <mat-label>Préciser l'adresse si différente  de l'organisme</mat-label>
+            <input formControlName="adresseSA" matInput placeholder="adresseSA">
+          </mat-form-field>
+        </div>
+        <h2>Service assurant la gestion des stagiaires (RH)</h2>
+        <div>
+          <mat-form-field class="full-width">
+            <mat-label>NOM:</mat-label>
+            <input formControlName="nomRH" matInput required>
+          </mat-form-field>
+          <mat-form-field class="full-width">
+            <mat-label>Prénom:</mat-label>
+            <input formControlName="prenomRH" matInput required>
+          </mat-form-field>
+        </div>
+
+        <div>
+          <mat-form-field class="full-width">
+            <mat-label>Tél:</mat-label>
+            <input formControlName="numTelephRH" matInput required>
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field class="full-width">
+            <mat-label>Email:</mat-label>
+            <input formControlName="emailRH" matInput required>
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field class="full-width">
+            <mat-label>Adresse:</mat-label>
+            <input formControlName="adresseRH" matInput required>
+          </mat-form-field>
+        </div>
+
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary">Save</button>
+    </mat-card-actions>
+  </mat-card>
+</form>

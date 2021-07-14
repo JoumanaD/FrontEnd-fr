@@ -7,3 +7,26 @@
 * mat-form-field {
   margin-top: 1rem;
 }
+
+.card {
+  margin: 0 auto;
+  width: 40%;
+}
+
+::ng-deep .mat-input-wrapper{
+  width:400px !important;
+}
+
+.mat-form-field--inline {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.mat-form-field--inline .mat-form-field {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 20px;
+
+}
+

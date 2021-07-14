@@ -1,33 +1,26 @@
-<mat-toolbar>
-  <span>My Application</span>
-</mat-toolbar>
-<mat-toolbar-row>
-  <span>Custom Toolbar</span>
-</mat-toolbar-row>
-<mat-toolbar-row>
-  <span>Second Line</span>
-  <span class="example-spacer"></span>
-  <mat-icon class="example-icon" aria-hidden="false" aria-label="Example user verified icon">verified_user</mat-icon>
-</mat-toolbar-row>
-<div class="container">
-  <h1  class="title"> FICHE </h1>
+<h1>FICHE DE RENSEIGNEMENTS POUR 'numero etudiant'</h1>
 
-  <nav class="navbar navbar-expand-sm bg-light navbar-dark">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <button routerLink="etudiant"
-        class="m-1 btn btn-light btn-outline-primary" Button>Etudiant</button>
-      </li>
-
-      <li class="nav-item">
-        <button routerLink="recruteur"
-        class="m-1 btn btn-light btn-outline-primary" Button>Recruteur</button>
-      </li>
-
-      <li class="nav-item">
-        <button routerLink="responsable"
-        class="m-1 btn btn-light btn-outline-primary" Button>Responsable</button>
-      </li>
-    </ul>
-  </nav>
-</div>
+<mat-horizontal-stepper>
+  <mat-step>
+    <ng-template matStepLabel><b>Etudiant</b></ng-template>
+    <app-etudiant></app-etudiant>
+    <button mat-button matStepperPrevious>Back</button>
+    <button mat-button matStepperNext>Next</button>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel><b>Etablissement</b></ng-template>
+    <app-etablissement></app-etablissement>
+    <button mat-button matStepperPrevious>Back</button>
+    <button mat-button matStepperNext>Next</button>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel><b>Stage</b></ng-template>
+    <button mat-button matStepperPrevious>Back</button>
+    <button mat-button matStepperNext>Next</button>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel><b>FIN</b></ng-template>
+    <button mat-button matStepperPrevious>Back</button>
+    <button mat-button matStepperNext>Next</button>
+  </mat-step>
+</mat-horizontal-stepper>
