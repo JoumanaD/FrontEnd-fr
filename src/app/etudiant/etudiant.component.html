@@ -8,7 +8,7 @@
         <div>
           <mat-form-field class="example-full-width">
             <mat-label>ID étudiant:</mat-label>
-            <input formControlName="IDetudiant" matInput placeholder="ID étudiant (8 chiffres)" required>
+            <input formControlName="IDetudiant" matInput placeholder="8 chiffres" required>
           </mat-form-field>
         </div>
         <div>
@@ -24,44 +24,59 @@
         <div>
           <mat-form-field class="example-full-width">
             <mat-label>Numéro Téléphone:</mat-label>
-            <input formControlName="numTeleph" matInput placeholder="Numéro Téléphone" required>
+            <input class="fb-form-auto-input" formControlName="numTeleph" matInput placeholder="Numéro Téléphone" required>
+            <span matPrefix>+33&nbsp;</span>
           </mat-form-field>
           <mat-form-field class="full-width">
             <mat-label>Email:</mat-label>
             <input type="email" class="form-control" formControlName="email" matInput placeholder="Email Adresse" required>
           </mat-form-field>
         </div>
+        <form [formGroup]="adresseForm" class="form-container">
+          <mat-card>
+            <mat-card-content class="mat-form-field--inline">
+            <div>
+              <mat-form-field class="full-width">
+                <mat-label>Adresse:</mat-label>
+                <input formControlName="adresse" matInput placeholder="Adresse" required>
+              </mat-form-field>
+
+              <mat-form-field class="full-width">
+                <mat-label>Code Postale:</mat-label>
+                <input formControlName="codepostale" matInput placeholder="Code Postal" required>
+              </mat-form-field>
+
+              <mat-form-field class="full-width">
+                <mat-label>Ville:</mat-label>
+                <input formControlName="ville" matInput placeholder="Ville" required>
+              </mat-form-field>
+
+              <mat-form-field class="full-width">
+                <mat-label>Pays:</mat-label>
+                <input formControlName="pays" matInput placeholder="Pays" required>
+              </mat-form-field>
+            </div>
+            </mat-card-content>
+          </mat-card>
+        </form>
         <div>
-          <mat-form-field class="full-width">
-            <mat-label>Adresse:</mat-label>
-            <input formControlName="adresse" matInput placeholder="Adresse" required>
-          </mat-form-field>
-
-          <mat-form-field class="full-width">
-            <mat-label>Code Postale:</mat-label>
-            <input formControlName="codepostale" matInput placeholder="Code Postal" required>
-          </mat-form-field>
-
-          <mat-form-field class="full-width">
-            <mat-label>Ville:</mat-label>
-            <input formControlName="ville" matInput placeholder="Ville" required>
-          </mat-form-field>
-
-          <mat-form-field class="full-width">
-            <mat-label>Pays:</mat-label>
-            <input formControlName="pays" matInput placeholder="Pays" required>
-          </mat-form-field>
-        </div>
-        <div>
-          <mat-form-field class="full-width" style="width:400px !important">
+          <mat-form-field class="full-width" style="width:300px !important">
             <mat-label>Type d'affiliation à la sécurité sociale:</mat-label>
-            <input formControlName="TypeSS" matInput required>
+            <mat-select matNativeControl required>
+              <mat-option *ngFor="let ss of typeSS" [value]="ss">
+                {{ ss }}
+              </mat-option>
+            </mat-select>
           </mat-form-field>
         </div>
         <div>
-          <mat-form-field class="full-width" style="width:400px !important">
+          <mat-form-field class="full-width" style="width:250px !important">
             <mat-label>Caisse d'assurance maladie:</mat-label>
-            <input formControlName="CAM" matInput required>
+            <mat-select matNativeControl required>
+              <mat-option *ngFor="let am of assurance" [value]="am">
+                {{ am }}
+              </mat-option>
+            </mat-select>
           </mat-form-field>
         </div>
         <div>

@@ -1,18 +1,32 @@
 <div class="background">
 
   <h1  class="title"> {{ title }} </h1>
+  <form [formGroup]="ficheForm" class="form-container">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>CONNEXION</mat-card-title>
+      </mat-card-header>
+      <mat-card-content class="mat-form-field--inline">
+        <div layout="row" layout-align="center center">
 
-  <mat-card>
-    <mat-card-header>
-      <mat-card-title>CONNEXION</mat-card-title>
-    </mat-card-header>
-    <mat-card-content></mat-card-content>
-  </mat-card>
-  <button routerLink="etudiants"
-    class="myButton" Button>Liste des Etudiants</button>
+          <mat-form-field class="example-full-width">
+            <mat-label>ID étudiant:</mat-label>
+            <input formControlName="IDetudiant" matInput placeholder="8 chiffres" required>
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field class="example-full-width">
+            <mat-label>Numéro fiche:</mat-label>
+            <input formControlName="noFiche" matInput placeholder="0 pour créer une fiche" required>
+          </mat-form-field>
+        </div>
+      <button mat-raised-button color="primary" routerLink="fiche">Submit</button>
+      </mat-card-content>
+    </mat-card>
+  </form>
+  <button mat-raised-button color="primary" routerLink="etudiants">Liste des Etudiants</button>
+  <button mat-raised-button color="primary" routerLink="fiche">Fiche</button>
 
-  <button routerLink="fiche"
-    class="myButton" Button>Fiche</button>
 </div>
 
 

@@ -87,4 +87,7 @@ export interface Stage {
   tuteur: number;
 }
 
+export interface DialogData {
+  tempsPartiel: boolean;
+}
 

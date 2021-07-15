@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Etudiant } from 'src/app/generators';
 
 @Component({
   selector: 'app-add-edit-etud',
@@ -6,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-edit-etud.component.css']
 })
 export class AddEditEtudComponent implements OnInit {
-
+  @Input() etud!:Etudiant;
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
 }

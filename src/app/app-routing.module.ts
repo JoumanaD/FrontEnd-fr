@@ -1,3 +1,4 @@
+import { EtablissementComponent } from './etablissement/etablissement.component';
 import { ShowEtudiantComponent } from './etudiant/show-etudiant/show-etudiant.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -11,6 +12,7 @@ const routes: Routes = [
   {path:'etudiants', component:ShowEtudiantComponent},
   {path:'fiche', component:FicheComponent},
   {path:'fiche/etudiant', component:EtudiantComponent},
+  {path:'fiche/etab', component:EtablissementComponent},
 
 ];
 

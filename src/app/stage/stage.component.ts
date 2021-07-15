@@ -1,18 +1,26 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, Validators } from '@angular/forms';
+import { FormControl, Validators, FormBuilder } from '@angular/forms';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
-  selector: 'app-etablissement',
-  templateUrl: './etablissement.component.html',
-  styleUrls: ['./etablissement.component.css']
+  selector: 'app-stage',
+  templateUrl: './stage.component.html',
+  styleUrls: ['./stage.component.css']
 })
-export class EtablissementComponent implements OnInit {
+export class StageComponent implements OnInit {
+  tempspartiel: boolean = false;
 
-  constructor(private formBuilder:FormBuilder) { }
+  constructor(private formBuilder: FormBuilder, public dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
 
+
+  dispo: String[] = [
+    "Importante",
+    "Partielle",
+    "Inexistante",
+  ];
 
   adresseForm = this.formBuilder.group({
     adresse:new FormControl('', [

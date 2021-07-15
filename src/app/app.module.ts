@@ -28,6 +28,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { RouterModule } from '@angular/router';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatTableModule } from '@angular/material/table';
+import { StageComponent } from './stage/stage.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { MatTableModule } from '@angular/material/table';
     AddEditEtudComponent,
     EtablissementComponent,
     ShowEtudiantComponent,
+    StageComponent,
 
   ],
 

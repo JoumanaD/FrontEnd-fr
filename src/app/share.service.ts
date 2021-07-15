@@ -47,19 +47,19 @@ export class ShareService {
 
   //Fiche
   getficheList(): Observable<Fiche[]>{
-    return this.http.get<Fiche[]>(this.APIUrl + '/adresse');
+    return this.http.get<Fiche[]>(this.APIUrl + '/fiche');
   }
 
   addfiche(f: Fiche){
-    return this.http.post(this.APIUrl + '/adresse', f);
+    return this.http.post(this.APIUrl + '/fiche/', f);
   }
 
   editfiche(f: Fiche){
-    return this.http.put(this.APIUrl + '/adresse', f);
+    return this.http.put(this.APIUrl + '/fiche/', f);
   }
 
   deletefiche(f: Fiche){
-    return this.http.delete(this.APIUrl + '/adresse/'+f);
+    return this.http.delete(this.APIUrl + '/fiche/'+f);
   }
 
   //Etablissement

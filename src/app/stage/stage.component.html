@@ -1,0 +1,132 @@
+<form [formGroup]="etabForm" class="form-container">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>STAGE</mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="mat-form-field--inline">
+      <div>
+        <div>
+          <h2>TUTEUR PROFESSIONNEL DU STAGIAIRE</h2>
+          <div>
+            <mat-form-field class="example-full-width">
+              <mat-label>Nom:</mat-label>
+              <input formControlName="nom" matInput placeholder="Nom" required>
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+              <mat-label>Prénom:</mat-label>
+              <input formControlName="prenom" matInput placeholder="Prénom" required>
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field class="example-full-width">
+              <mat-label>Fonction:</mat-label>
+              <input formControlName="fonction" matInput placeholder="Fonction" required>
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+              <mat-label>Service:</mat-label>
+              <input formControlName="service" matInput placeholder="Service" required>
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field class="full-width">
+              <mat-label>Tél:</mat-label>
+              <input formControlName="numTelephRH" matInput required>
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field class="full-width">
+              <mat-label>Email:</mat-label>
+              <input formControlName="emailRH" matInput required>
+            </mat-form-field>
+          </div>
+          <form [formGroup]="adresseForm" class="form-container">
+            <mat-card>
+              <mat-card-content class="mat-form-field--inline">
+                <div>
+                  <mat-form-field class="full-width" style="width:250px !important">
+                    <mat-label>Adresse:</mat-label>
+                    <input formControlName="adresse" matInput placeholder="Adresse" required>
+                  </mat-form-field>
+
+                  <mat-form-field class="full-width">
+                    <mat-label>Code Postale:</mat-label>
+                    <input formControlName="codepostale" matInput placeholder="Code Postal" required>
+                  </mat-form-field>
+
+                  <mat-form-field class="full-width">
+                    <mat-label>Ville:</mat-label>
+                    <input formControlName="ville" matInput placeholder="Ville" required>
+                  </mat-form-field>
+
+                  <mat-form-field class="full-width">
+                    <mat-label>Pays:</mat-label>
+                    <input formControlName="pays" matInput placeholder="Pays" required>
+                  </mat-form-field>
+                </div>
+              </mat-card-content>
+            </mat-card>
+          </form>
+
+          <div>
+            <mat-form-field class="full-width" style="width:300px !important">
+              <mat-label>Disponibilité du tuteur professionnel de stage:</mat-label>
+              <mat-select matNativeControl required>
+                <mat-option *ngFor="let d of dispo" [value]="d">
+                  {{ d }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+        </div>
+
+
+        <div>
+          <h2>DATE DU STAGE</h2>
+          <div>
+            <mat-form-field class="full-width" >
+              <mat-label>Période temps partiel:</mat-label>
+              <div>
+                <mat-form-field appearance="fill">
+                  <mat-label>Date Début</mat-label>
+                  <input matInput [matDatepicker]="picker">
+                  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                  <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+                </div>
+                <div>
+                <mat-form-field appearance="fill">
+                  <mat-label>Date de fin</mat-label>
+                  <input matInput [matDatepicker]="picker">
+                  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                  <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+              </div>
+            </mat-form-field>
+          </div>
+
+          <div>
+            <mat-form-field class="full-width" >
+              <mat-label>Période temps plein(35h/semaine):</mat-label>
+              <div>
+                <mat-form-field appearance="fill">
+                  <mat-label>Date Début</mat-label>
+                  <input matInput [matDatepicker]="picker">
+                  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                  <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                  <mat-label>Date de fin</mat-label>
+                  <input matInput [matDatepicker]="picker">
+                  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                  <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+              </div>
+            </mat-form-field>
+          </div>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary">Save</button>
+    </mat-card-actions>
+  </mat-card>
+</form>
